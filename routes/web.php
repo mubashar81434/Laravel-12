@@ -8,7 +8,15 @@ Route::get('/', function () {
 });
 
 //Route::get('/about',[UserController::class,'getUser']);
-Route::get('/user',[UserController::class,'returnView']);
+Route::get('/about', function (){
+    return view('about');
+});
+
+Route::get('/user',function(){
+        return view('user');
+    // [ControllerKaName::class,'FunctionKaName']
+
+});
 
 Route::get('/admin',[UserController::class, 'adminLogin']);
 
