@@ -1,4 +1,5 @@
 <div>
-    <span>User login successfully</span>
+    <span>{{$msg}}</span>
+    <div>{{$myTxt}}</div>   
     <!-- Knowing is not enough; we must apply. Being willing is not enough; we must do. - Leonardo da Vinci -->
 </div>
