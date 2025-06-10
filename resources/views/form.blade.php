@@ -1,7 +1,8 @@
 <div>
     <!-- Act only according to that maxim whereby you can, at the same time, will that it should become a universal law. - Immanuel Kant -->
      <h4 class="bg-amber-400">User Form</h4>
-     <form action="/about" method="post">
+     <form action="adduser" method="post">
+        @csrf
         <div>
             <input 
                 type="text" 
