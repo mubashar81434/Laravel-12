@@ -8,19 +8,11 @@ Route::get('/', function(){
     return view('welcome');
 });
 
-//Route::get('/about',[UserController::class,'getUser']);
-Route::get('/about', function (){
-    return view('about');
-});
-
-Route::get('/user',function(){
-        return view('user');
-    // [ControllerKaName::class,'FunctionKaName']
-});
-
 Route::get('/form', function(){
     return view('form');
 });
+
+Route::post('adduser',[AuthController::class,'addUser']);
 
 /*
 Route::post('relative-url/{koi b data pass kr skty h}',function($uc-data-ko-yaha-pr-accept-kiya){
