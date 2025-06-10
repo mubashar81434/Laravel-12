@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     //
-    function addUser (){
-        echo "Add user function call";
+    function addUser(Request $req){
+        //echo "Add user function called";    
+        return $req;
     }
 }
