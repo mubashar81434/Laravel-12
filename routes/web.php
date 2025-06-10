@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 
-Route::get('/', function () {
+use App\Http\Controllers\AuthController;
+
+Route::get('/', function(){
     return view('welcome');
 });
 
@@ -15,10 +16,11 @@ Route::get('/about', function (){
 Route::get('/user',function(){
         return view('user');
     // [ControllerKaName::class,'FunctionKaName']
-
 });
 
-Route::get('/admin',[UserController::class, 'adminLogin']);
+Route::get('/form', function(){
+    return view('form');
+});
 
 /*
 Route::post('relative-url/{koi b data pass kr skty h}',function($uc-data-ko-yaha-pr-accept-kiya){
@@ -27,5 +29,3 @@ Route::post('relative-url/{koi b data pass kr skty h}',function($uc-data-ko-yaha
     // ic mn uc data ko use kr lain gy...
 })
 */
-
-
