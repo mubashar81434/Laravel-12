@@ -4,15 +4,17 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 
-Route::get('/', function(){
+Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/form', function(){
-    return view('form');
-});
+Route::view('form','form');
 
-Route::post('adduser',[AuthController::class,'addUser']);
+
+Route::view('formAdvance','form-2');
+
+Route::post('adduser', [AuthController::class, 'addUser']);
+Route::post('submit', [AuthController::class, 'formTwoFun']);
 
 /*
 Route::post('relative-url/{koi b data pass kr skty h}',function($uc-data-ko-yaha-pr-accept-kiya){
