@@ -8,13 +8,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('form','form');
+Route::view('home', 'home');
+Route::view('about', 'about');
+
+//Route::view('form','form');
+// Route::post('adduser', [AuthController::class, 'addUser']);
 
 
-Route::view('formAdvance','form-2');
-
-Route::post('adduser', [AuthController::class, 'addUser']);
-Route::post('submit', [AuthController::class, 'formTwoFun']);
+// Route::view('formAdvance','form-2');
+// Route::post('submit', [AuthController::class, 'formTwoFun']);
 
 /*
 Route::post('relative-url/{koi b data pass kr skty h}',function($uc-data-ko-yaha-pr-accept-kiya){
