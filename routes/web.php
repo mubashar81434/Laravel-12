@@ -3,13 +3,19 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Home;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::view('home', 'home');
-Route::view('about', 'about');
+
+Route::view('about/user/profile', 'about')->name("hm");
+
+//Route::get('show', [Home::class,'show']);
+
+Route::view('home/profile/{abc}', 'home')->name('xyz');
 
 //Route::view('form','form');
 // Route::post('adduser', [AuthController::class, 'addUser']);
